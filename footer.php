@@ -1,5 +1,8 @@
-<footer>
-&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php echo __('All rights reserved'); ?>
+</div>
+<footer class="footer">
+	<div class="container">
+		<a href="mailto:hej@simon-ring.se">hej@simon-ring.se</a> 
+	</div>
 </footer>
 <?php wp_footer(); ?>
 </body>

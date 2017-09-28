@@ -11,9 +11,7 @@
 <body class="<?php body_class(); ?>">
 	<header class="header">
 		<a href="<?php site_url(); ?>">
-			<?php
-			the_custom_logo();
-			?>
+			<h1><?php bloginfo( 'name' ); ?></h1>
 		</a>
 		<nav class="navigation">
 			<?php
@@ -25,7 +23,8 @@
 				'theme_location' => 'header-menu',
 				);
 			
-			wp_nav_menu( $args );
+			//wp_nav_menu( $args );
 			?>
 		</nav>
 	</header>
+	<div class="container">

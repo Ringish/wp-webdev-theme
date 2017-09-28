@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700');
+$primary-color: #ec5a05;
+$secondary-color: #81bdbc;
+
+$main-width: 800px;
+body {
+	font-family: 'Fira Mono', monospace;
+	letter-spacing:1px;
+	margin:0;
+}
+h2 {
+	margin-top:5rem;
+}
+a {
+	color:$secondary-color;
+}
+ul {
+	list-style:none;
+	li {
+		padding:10px;
+		border-bottom:1px solid $primary-color;
+	}
+}
+.container {
+	width:$main-width;
+	max-width:100%;
+	margin:0 auto;
+}
+
+//
+// Header
+//
+.header {
+	text-align:center;
+}
+
+//
+// Skills
+//
+.skill-list {
+	padding-left:0;
+	li {
+		float: left;
+		width: 49%;
+		box-sizing: border-box;
+		@media screen and (max-width:480px) {
+			float:none;
+			width:100%;
+			margin-left:0 !important;
+		}
+		&:nth-child(even) {
+			margin-left:2%;
+		}
+		&:after {
+			display: block;
+			clear: both;
+			content:'';
+		}
+		.skill-title {
+			float:left;
+		}
+		.skill-score {
+			float:right;
+			font-family:FontAwesome;
+			color:$secondary-color;
+			letter-spacing: 4px;
+
+			&[data-score="2"]:before {
+				content:"\f005\f005";
+			}
+			&[data-score="3"]:before {
+				content:"\f005\f005\f005";
+			}
+			&[data-score="4"]:before {
+				content:"\f005\f005\f005\f005";
+			}
+			&[data-score="5"]:before {
+				content:"\f005\f005\f005\f005\f005";
+			}
+
+
+			&:before {
+				content:"\f005";
+			}
+		}
+	}
+	&:after {
+		display: block;
+		content:'';
+		clear: both;
+	}
+}
+
+//
+// Projects
+//
+.project {
+	p {
+		display: none;
+	}
+	display:inline-block;
+	max-height:167px;
+	overflow:hidden;
+	img {
+		display: block;
+	}
+	.caption {
+		display: block;
+		height:167px;
+		background:$secondary-color;
+		position:relative;
+		transform:translateY(0);
+		transition:.2s;
+		h3 {
+			margin:0;
+			color:#FFF;
+			text-align: center;
+			position:absolute;
+			top:50%;
+			transform:translateY(-50%);
+			width:100%;
+		}
+	}
+	&:hover {
+		.caption {
+			transform: translateY(-100%);
+		}
+	}
+}
+
+//
+// Footer
+//
+.footer {
+	margin-top:50px;
+	background:$secondary-color;
+	padding:50px 0;
+	a {
+		color:$primary-color;
+	}
+}
